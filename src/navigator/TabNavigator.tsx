@@ -12,6 +12,7 @@ import { getFirestore, doc, getDoc } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 import { initializeApp } from "firebase/app";
 import { firebaseConfig } from "../../firebase-config";
+import { Entypo } from '@expo/vector-icons';
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
@@ -83,8 +84,8 @@ const TabNavigator = () => {
                 focused ? { backgroundColor: COLORS.Green } : {},
               ]}
             >
-              <Feather
-                name="search"
+              <Entypo
+                name="info-with-circle"
                 size={FONTSIZE.size_30}
                 color={COLORS.White}
               />

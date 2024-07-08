@@ -33,6 +33,7 @@ import {
 } from "firebase/firestore";
 import { Feather } from "@expo/vector-icons";
 
+
 const app = initializeApp(firebaseConfig);
 const firestore = getFirestore(app);
 

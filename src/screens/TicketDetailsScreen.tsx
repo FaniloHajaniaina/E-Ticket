@@ -208,11 +208,12 @@ const styles = StyleSheet.create({
   },
   appHeaderContainer: {
     marginHorizontal: SPACING.space_36,
-    marginTop: SPACING.space_20 * 2,
+    marginTop: SPACING.space_20,
   },
   ticketContainer: {
     flex: 1,
     justifyContent: "center",
+    marginTop: SPACING.space_20,
   },
   ticketBGImage: {
     alignSelf: "center",

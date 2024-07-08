@@ -1,5 +1,5 @@
 /////////////////////Login///////////////////
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   View,
   Text,
@@ -32,9 +32,19 @@ import { AntDesign } from "@expo/vector-icons";
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-const LoginScreen = ({ navigation }) => {
+const LoginScreen = ({ navigation }:any) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  useEffect(() => {
+    const unsubscribe = navigation.addListener("focus", () => {
+      // Clear email and password when screen is focused
+      setEmail("");
+      setPassword("");
+    });
+
+    return unsubscribe;
+  }, [navigation]);
 
   const navigateToSignUp = () => {
     navigation.navigate("SignUp"); // Navigate to sign up screen
